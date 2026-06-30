@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <filter id="sh" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="1.8" result="b"/>
+      <feOffset in="b" dy="2.5" result="o"/>
+      <feFlood flood-color="#100408" flood-opacity="0.48" result="f"/>
+      <feComposite in="f" in2="o" operator="in" result="sh"/>
+      <feMerge>
+        <feMergeNode in="sh"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <linearGradient id="fuse" x1="50%" y1="0%" x2="50%" y2="100%">
+      <stop offset="0%" stop-color="#f0f2f5"/>
+      <stop offset="100%" stop-color="#525e6a"/>
+    </linearGradient>
+    <linearGradient id="wing" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#687684"/>
+      <stop offset="45%" stop-color="#d4dce4"/>
+      <stop offset="100%" stop-color="#687684"/>
+    </linearGradient>
+    <radialGradient id="can" cx="50%" cy="36%" r="48%">
+      <stop offset="0%" stop-color="#e4f4ff"/>
+      <stop offset="100%" stop-color="#5a7488"/>
+    </radialGradient>
+    <radialGradient id="noz" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffd890"/>
+      <stop offset="100%" stop-color="#8a4020"/>
+    </radialGradient>
+    <linearGradient id="edge" x1="50%" y1="0%" x2="50%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <g filter="url(#sh)">
+    <!-- F-16 俯视：气泡座舱 + 切尖三角翼 + 单垂尾 -->
+    <path d="M100 10 L108 28 L112 46 L110 58 L100 64 L90 58 L88 46 L92 28 Z" fill="url(#fuse)"/>
+    <ellipse cx="100" cy="34" rx="8.5" ry="9.5" fill="url(#can)"/>
+    <path d="M96 28 L104 28" stroke="#ffffff" stroke-opacity="0.35" stroke-width="0.55"/>
+    <path d="M100 18 L100 56" stroke="#ffffff" stroke-opacity="0.18" stroke-width="0.65"/>
+
+    <!-- 机腹进气道阴影 -->
+    <path d="M94 56 Q100 62 106 56 L104 72 Q100 76 96 72 Z" fill="#4a5864" opacity="0.72"/>
+
+    <!-- 主翼 -->
+    <path d="M100 62 L78 72 L42 104 L18 136 L14 150 L36 154 L68 122 L90 92 L96 74 Z" fill="url(#wing)"/>
+    <path d="M100 62 L122 72 L158 104 L182 136 L186 150 L164 154 L132 122 L110 92 L104 74 Z" fill="url(#wing)"/>
+    <path d="M42 104 L68 122" stroke="#ffffff" stroke-opacity="0.2" stroke-width="0.55"/>
+    <path d="M158 104 L132 122" stroke="#ffffff" stroke-opacity="0.2" stroke-width="0.55"/>
+    <path d="M18 136 L42 104 L68 122" fill="#5a6672" opacity="0.5"/>
+    <path d="M182 136 L158 104 L132 122" fill="#5a6672" opacity="0.5"/>
+
+    <!-- 机身 -->
+    <path d="M100 58 L106 92 L108 128 L104 152 L100 162 L96 152 L92 128 L94 92 Z" fill="url(#fuse)"/>
+    <path d="M88 82 L112 82 M86 100 L114 100 M88 118 L112 118" stroke="#384450" stroke-opacity="0.38" stroke-width="0.55"/>
+
+    <!-- 单垂尾 -->
+    <path d="M96 132 L100 124 L104 132 L102 164 L100 172 L98 164 Z" fill="#424e5a"/>
+    <path d="M100 124 L100 172" stroke="#ffffff" stroke-opacity="0.14" stroke-width="0.5"/>
+
+    <!-- 尾喷口 -->
+    <ellipse cx="100" cy="156" rx="5" ry="3.5" fill="url(#noz)"/>
+    <ellipse cx="100" cy="156" rx="2.2" ry="1.5" fill="#fff0b0" opacity="0.75"/>
+
+    <!-- 翼尖 AIM 挂架示意 -->
+    <rect x="14" y="146" width="5" height="2.2" rx="0.5" fill="#3a4650" opacity="0.8"/>
+    <rect x="181" y="146" width="5" height="2.2" rx="0.5" fill="#3a4650" opacity="0.8"/>
+
+    <path d="M18 136 L42 104" stroke="url(#edge)" stroke-width="1" fill="none"/>
+    <path d="M182 136 L158 104" stroke="url(#edge)" stroke-width="1" fill="none"/>
+  </g>
+</svg>

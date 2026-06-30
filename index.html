@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3D 城市森林空战</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div id="bg3d" class="bg-3d" aria-hidden="true"></div>
+  <div class="game-shell">
+    <h1>3D 城市森林空战</h1>
+    <div class="hud">
+      <span id="score">分数: 0</span>
+      <span id="lives">血量: 100</span>
+      <span id="level">等级: 1</span>
+    </div>
+    <canvas id="gameCanvas" width="420" height="700" aria-label="game canvas"></canvas>
+    <button id="startBtn" class="start-btn" type="button">Start</button>
+    <button id="restartBtn" class="restart-btn" type="button">ReStart</button>
+    <p class="tips">操作：WASD 或方向键移动；空格或左键射击；宝箱可叠加；Q 核弹；R 重开 · 城市/森林 3D 空战</p>
+    <p id="message" class="message"></p>
+  </div>
+  <script src="https://unpkg.com/three@0.160.0/build/three.min.js"></script>
+  <script src="./pacific-3d.js"></script>
+  <script src="./game-3d.js"></script>
+  <script src="./audio.js"></script>
+  <script src="./game.js"></script>
+</body>
+</html>
